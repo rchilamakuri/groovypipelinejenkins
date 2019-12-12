@@ -11,7 +11,8 @@ import java.text.SimpleDateFormat
 
 
 
-Branch_Name = "Master" 
+Branch_Name = "Master"
+SOURCE_CODE_ROOT = "/var/lib/jenkins/workspace/firstPipelineWithShell" 
  
 node{
     
@@ -24,10 +25,17 @@ node{
       echo "In the branch from the repository branch ${Branch_Name}" 
       def name = "raghuram"
       echo "My name is ${name}"
-      echo "Current time is: "
-      def now = new Date()
-      println now.format("ddMMyyyy-HH:mm:ss.SSS", timeZone.getTimeZone('EDT5EDT'))
-      echo "Branch: ${Branch_Name}"               
+
+      echo "Branch: ${Branch_Name}"
+      stage('first stage on my own'){
+           mkdir raghuram
+           dir(./raghuram){
+          echo "Directory raghuram is created"
+          touch firstfile.groovy
+              
+           }
+              
+      }               
 
      }catch(Exception e){
       echo "The code is not working"
