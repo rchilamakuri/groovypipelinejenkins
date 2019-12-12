@@ -22,6 +22,8 @@ node{
      try{
       echo "start building my pipeline in this jenkinsfile"
       echo "In the branch from the repository branch ${Branch_Name}" 
+      def name = "raghuram"
+      echo "My name is ${name}"
       echo "Current time is: "
       def now = new Date()
       println now.format("ddMMyyyy-HH:mm:ss.SSS", timeZone.getTimeZone('EDT5EDT'))
