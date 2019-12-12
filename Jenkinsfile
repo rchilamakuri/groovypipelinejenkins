@@ -1,3 +1,7 @@
+#!/usr/bin/env groovy
+
+import hudson.model.*
+import hudson.EnvVars
 import hudson.model.Result
 import hudson.model.Run
 import jenkins.model.InterruptedBuildAction
@@ -9,9 +13,9 @@ import java.text.SimpleDateFormat
 
 Branch_Name = "Master" 
 pipeline{
- agent{
+ node{
   stages{   
-   stage('clean up'){
+    stage('clean up'){
       sh 'rm -rf*' 
     }
      try{
