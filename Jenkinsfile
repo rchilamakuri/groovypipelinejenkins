@@ -29,7 +29,7 @@ node{
       echo "Branch: ${Branch_Name}"
       stage('first stage on my own'){
            mkdir raghuram
-           dir(./raghuram){
+           dir("raghuram"){
           echo "Directory raghuram is created"
           touch firstfile.groovy
               
