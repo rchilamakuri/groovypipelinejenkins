@@ -12,11 +12,12 @@ import java.text.SimpleDateFormat
 
 
 Branch_Name = "Master" 
-pipeline{
- node{
-  stages{   
+ 
+node{
+    
     stage('clean up'){
-      sh 'rm -rf*' 
+      sh 'rm -rf*'
+      echo "Now the repository is empty" 
     }
      try{
       echo "start building my pipeline in this jenkinsfile"
@@ -33,6 +34,6 @@ pipeline{
        echo "settle down and learn properly to the "
      }
 
+
 }
-}
-}
+
