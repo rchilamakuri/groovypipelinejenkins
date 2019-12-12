@@ -31,7 +31,7 @@ node{
            dir("${SOURCE_CODE_ROOT}"){
              sh "mkdir raghuram && cd raghuram"
              echo "Directory raghuram is created"
-             touch file.txt
+             sh "touch file.txt"
              sh "ls -lart" 
            }
               
