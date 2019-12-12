@@ -21,7 +21,7 @@ pipeline{
       println now.format("ddMMyyyy-HH:mm:ss.SSS", timeZone.getTimeZone('EDT5EDT'))
       echo "Branch: ${Branch_Name}"               
 
-  }catch{
+  }catch(Exception e){
       echo "The code is not working"
   }finally{
  
