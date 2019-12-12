@@ -16,7 +16,7 @@ Branch_Name = "Master"
 node{
     
     stage('clean up'){
-      sh 'rm -rf*'
+      sh 'rm -rf *'
       echo "Now the repository is empty" 
     }
      try{
