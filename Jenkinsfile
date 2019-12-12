@@ -9,11 +9,12 @@ import java.text.SimpleDateFormat
 
 Branch_Name = "Master" 
 pipeline{
- 
-  stage('clean up'){
-  sh 'rm -rf*' 
-  }
-  try{
+ agent{
+  stages{   
+   stage('clean up'){
+      sh 'rm -rf*' 
+    }
+     try{
       echo "start building my pipeline in this jenkinsfile"
       echo "In the branch from the repository branch ${Branch_Name}" 
       echo "Current time is: "
@@ -21,12 +22,13 @@ pipeline{
       println now.format("ddMMyyyy-HH:mm:ss.SSS", timeZone.getTimeZone('EDT5EDT'))
       echo "Branch: ${Branch_Name}"               
 
-  }catch(Exception e){
+     }catch(Exception e){
       echo "The code is not working"
-  }finally{
+     }finally{
  
        echo "settle down and learn properly to the "
-  }
+     }
 
-
+}
+}
 }
