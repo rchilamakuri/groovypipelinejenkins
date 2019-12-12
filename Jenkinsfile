@@ -10,7 +10,7 @@ import java.text.SimpleDateFormat
 Branch_Name = "Master" 
 pipeline{
  
-  stage(clean up){
+  stage('clean up'){
   sh 'rm -rf*' 
   }
   try{
