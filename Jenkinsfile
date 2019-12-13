@@ -29,13 +29,21 @@ node{
       echo "Branch: ${Branch_Name}"
       stage('first stage on my own'){
            dir("${SOURCE_CODE_ROOT}"){
-             sh "mkdir raghuram && cd raghuram"
-             echo "Directory raghuram is created"
-             sh "touch file.txt"
-             sh "ls -lart" 
+                
+               git branch: "${Branch_Name}", changelog: true, poll : true 
+               GIT_COMMIT_HASH = sh (script : "git log -n 1 --pretty=format:'%H'", returnStdout: true)
+               echo "GIT_COMMIT_HASH: ${GIT_COMMIT_HASH}"
+               Short_Commit_Hash = GIT_COMMIT_HASH.substring(0,7)
+               env.committer = sh(returnStdout: true, script: "git log -n 1 --pretty=format:'%cn'").trim()
+  
+
            }
               
-      }               
+      }
+      stage('stage 2'){
+            
+            build job: "${SOURCE_CODE_ROOT}", propogate: true, wait: true, parameters: [string(name: ${Branch_Name}, value: "This is test to learn" )] 
+      }                
 
      }catch(Exception e){
       echo "The code is not working"
