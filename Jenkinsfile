@@ -30,12 +30,13 @@ node{
       stage('first stage on my own'){
            dir("${SOURCE_CODE_ROOT}"){
                 
-               git branch: "${Branch_Name}", changelog: true, poll : true 
-               GIT_COMMIT_HASH = sh (script : "git log -n 1 --pretty=format:'%H'", returnStdout: true)
-               echo "GIT_COMMIT_HASH: ${GIT_COMMIT_HASH}"
-               Short_Commit_Hash = GIT_COMMIT_HASH.substring(0,7)
-               env.committer = sh(returnStdout: true, script: "git log -n 1 --pretty=format:'%cn'").trim()
-  
+               //git branch: "${Branch_Name}", changelog: true, poll : true 
+               //GIT_COMMIT_HASH = sh (script : "git log -n 1 --pretty=format:'%H'", returnStdout: true)
+               //echo "GIT_COMMIT_HASH: ${GIT_COMMIT_HASH}"
+               //Short_Commit_Hash = GIT_COMMIT_HASH.substring(0,7)
+               //env.committer = sh(returnStdout: true, script: "git log -n 1 --pretty=format:'%cn'").trim()
+                 
+             echo "The stage if working accordinglu try modifiying the next job"
 
            }
               
