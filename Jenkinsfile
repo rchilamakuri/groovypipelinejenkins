@@ -43,7 +43,7 @@ node{
       }
       stage('stage 2'){
             
-            build job: "${SOURCE_CODE_ROOT}", propogate: true, wait: true, parameters: [string(name: "${Branch_Name}", value: "This is test to learn" )] 
+            build job: "${SOURCE_CODE_ROOT}", propagate: true, wait: true, parameters: [string(name: "${Branch_Name}", value: "This is test to learn" )] 
       }                
 
      }catch(Exception e){
