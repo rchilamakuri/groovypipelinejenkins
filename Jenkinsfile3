@@ -4,5 +4,15 @@ import hudson.model.View
 
 def name = "raghuram"
 
-echo "${name}"
+try{
+    stage(firstOne){
+        echo "${name}"
+    }
+}catch(Exception e){
+    echo "Your stage is not working"
+
+}finally{
+    echo "whereever you are learn the basics"
+}
+
 
