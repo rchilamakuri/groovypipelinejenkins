@@ -5,7 +5,7 @@ import hudson.model.View
 def name = "raghuram"
 
 try{
-    stage(firstOne){
+    stage('firstOne'){
         echo "${name}"
     }
 }catch(Exception e){
