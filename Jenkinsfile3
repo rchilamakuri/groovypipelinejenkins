@@ -1,18 +1,24 @@
 import jenkins.model.Jenkins
-import hudson.model.ListView
 import hudson.model.View
 
-def name = "raghuram"
+
+def first_name = "Raghuram"
+def last_name = "Chilamakuri"
 
 try{
-    stage('firstOne'){
-        echo "${name}"
-    }
-}catch(Exception e){
-    echo "Your stage is not working"
-
-}finally{
-    echo "whereever you are learn the basics"
+stage('stageOne'){
+       
+    echo "${first_name}"
+}
+stage('stageTwo'){
+    
+    echo "${last_name}"
+}
+}catch{
+    echo "your pipeline is working fine but you are an idiot"
+}
+finally{
+    echo "First learn the basics and get into the field"
 }
 
 
