@@ -17,11 +17,6 @@ pipeline{
                 sh 'echo "INBETWEEN IS $INBETWEEN"'
                 sh 'echo "OTHER_VAR IS $OTHER_VAR"'
             
-                sh 'echo $CRED1 > cred1.txt'
-                sh 'echo $CRED2 > cred2.txt'
-                archive "**/*.txt"  
-            
-            
             }
         }
     }
