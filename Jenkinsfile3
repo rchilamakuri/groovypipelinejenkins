@@ -14,7 +14,7 @@ stage('stageTwo'){
     
     echo "${last_name}"
 }
-}catch{
+}catch(Exception e){
     echo "your pipeline is working fine but you are an idiot"
 }
 finally{
