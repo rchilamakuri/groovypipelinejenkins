@@ -1,24 +1,21 @@
 import jenkins.model.Jenkins
+import hudson.model.ListView
 import hudson.model.View
 
+Jenkins jenkins = Jenkins.getInstance()
 
-def first_name = "Raghuram"
-def last_name = "Chilamakuri"
-
-try{
-stage('stageOne'){
-       
-    echo "${first_name}"
-}
-stage('stageTwo'){
-    
-    echo "${last_name}"
-}
-}catch(Exception e){
-    echo "your pipeline is working fine but you are an idiot"
-}
-finally{
-    echo "First learn the basics and get into the field"
+def viewName = 'myTest'
+echo "Emo chesthundho ikkada chudu"
+jenkins.addView(new ListView(viewName))
+myView = hudson.model.instance.getView(viewName)
+for(item in Jenkins.instance.projects.collect()){
+    if(item.name == ~/.*Test*/){
+        myview.doAddJobToView(item.name)
+    }
 }
 
+viewName = 'Integration'
+jenkins.addView(new ListView(viewName))
+myView = hudson.model.Hudson.instance.getView(viewName)
+myView.setIncludeRegex(".*Integration.*")
 
