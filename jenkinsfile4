@@ -1,0 +1,18 @@
+import hudson.model.Run
+import jenkins.model.InterruptedBuildAction
+import jenkins.model.CauseOfInterruption.UserInterruption
+import groovy.json.*
+import java.text.SimpleDateFormat
+import jenkins.model.Jenkins;
+import hudson.model.FreeStyleProject;
+import hudson.tasks.shell;
+
+
+job = Jenkins.instance.createproject(FreeStyleProject, 'job-name')
+job.buildersList.add(new Shell('echo hello world'))
+job.save()
+
+build = job.scheduleBuild2(5, new hudson.model.Cause.UserIdCause())
+
+build.get()
+
