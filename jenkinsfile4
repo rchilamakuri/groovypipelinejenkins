@@ -5,7 +5,7 @@ import groovy.json.*
 import java.text.SimpleDateFormat
 import jenkins.model.Jenkins;
 import hudson.model.FreeStyleProject;
-import hudson.tasks.shell;
+import hudson.tasks.Shell;
 
 
 job = Jenkins.instance.createproject(FreeStyleProject, 'job-name')
