@@ -43,19 +43,19 @@ stage('build2'){
 
 stage('build 3'){
    
-     echo "BUILD_NUMBER" is ${BUILD_NUMBER}
-     echo "BUILD_ID" is ${BUILD_ID}
-     echo "BUILD_DISPLAY_NAME" is ${BUILD_DISPLAY_NAME}
-     echo "JOB_NAME" is ${JOB_NAME}
-     echo "JOB_BASE_NAME"is ${JOB_BASE_NAME}
-     echo "BUILD_TAG" is ${BUILD_TAG}
-     echo "EXECUTOR_NUMBER" is ${EXECUTER_NUMBER}
-     echo "NODE_NAME" is ${NODE_NAME}
-     echo "NODE_LABELS" is ${NODE_LABELS}
-     echo "JENKINS_HOME" is ${JENKINS_HOME}
-     echo "JENKINS_URL" is ${JENKINS_URL}
-     echo "BUILD_URL" is ${BUILD_URL}
-     echo "JOB_URL" is ${JOB_URL}
+     echo "BUILD_NUMBER" is "${BUILD_NUMBER}"
+     echo "BUILD_ID" is "${BUILD_ID}"
+     echo "BUILD_DISPLAY_NAME" is "${BUILD_DISPLAY_NAME}"
+     echo "JOB_NAME" is "${JOB_NAME}"
+     echo "JOB_BASE_NAME"is "${JOB_BASE_NAME}"
+     echo "BUILD_TAG" is "${BUILD_TAG}"
+     echo "EXECUTOR_NUMBER" is "${EXECUTER_NUMBER}"
+     echo "NODE_NAME" is "${NODE_NAME}"
+     echo "NODE_LABELS" is "${NODE_LABELS}"
+     echo "JENKINS_HOME" is "${JENKINS_HOME}"
+     echo "JENKINS_URL" is "${JENKINS_URL}"
+     echo "BUILD_URL" is "${BUILD_URL}"
+     echo "JOB_URL" is "${JOB_URL}"
  
 }
 
