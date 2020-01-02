@@ -8,11 +8,19 @@ import hudson.model.FreeStyleProject;
 import hudson.tasks.Shell;
 
 
-job = Jenkins.instance.createproject(FreeStyleProject, 'job-name')
-job.buildersList.add(new Shell('echo hello world'))
-job.save()
+node(){
 
-build = job.scheduleBuild2(5, new hudson.model.Cause.UserIdCause())
+stage('build'){
 
-build.get()
+    echo "Hello World!"
+    sh "echo Hello world from the shell"
+    sh "hostname"
+    sh "uptime"  
+   }
+
+}
+
+
+
+
 
