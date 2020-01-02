@@ -17,19 +17,32 @@ stage('build'){
     sh "hostname"
     sh "uptime"  
    }
+
 stage('build2'){
     
      def disk_size = sh(script: "df / --output=avail | tail -1", returnStdout: true).trim() as Integer
      println("disk_size = ${disk_size}")
 
-
-
-
-
 }
 
-
-
+stage('build 3'){
+   
+     echo "BUILD_NUMBER" :: $BUILD_NUMBER
+     echo "BUILD_ID" :: $BUILD_NUMBER
+     echo "BUILD_DISPLAY_NAME" :: $BUILD_DISPLAY_NAME
+     echo "JOB_NAME" :: $JOB_NAME
+     echo "JOB_BASE_NAME" :: $JOB_BASE_NAME
+     echo "BUILD_TAG" :: $BUILD_TAG
+     echo "EXECUTOR_NUMBER" :: $EXECUTER_NUMBER
+     echo "NODE_NAME" :: $NODE_NAME
+     echo "NODE_LABELS" :: $NODE_LABELS
+     echo "WORKSPACE" :: $WORKSPACE
+     echo "JENKINS_HOME" :: $JENKINS_HOME
+     echo "JENKINS_URL" :: $JENKINS_URL
+     echo "BUILD_URL" :: $BUILD_URL
+     echo "JOB_URL" :: $JOB_URL
+ 
+}
 }
 
 
