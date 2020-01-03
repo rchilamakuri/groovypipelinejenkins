@@ -60,24 +60,6 @@ stage('build 3'){
 }
 
 
-stage('build 4'){
-
-    echo "This is not how it works"
-
-}
-
-}
-
-def checkFolderForDiffs(file_name){
-
-try{
-    sh "git diff --queit --exit-code --name-only origin/master ${file_name}"
-    return false
-}
-catch(err){
- return true
-}
-}
 
 
 
