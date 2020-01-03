@@ -13,7 +13,6 @@ node(){
 stage('build EchoBash'){
 
   sh "echo $BASH"
-  sh "echo $$"
   sh "echo $BASHPID"
   sh "ps ax | grep bash"
 
