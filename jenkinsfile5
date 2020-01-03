@@ -8,18 +8,14 @@ import hudson.model.FreeStyleProject;
 import hudson.tasks.Shell
 
 
-
-
-
-
 node(){
 
 stage('build EchoBash'){
 
-  echo $BASH
-  echo $$
-  echo $BASHPID
-  sh " ps ax | grep bash"
+  sh "echo $BASH"
+  sh "echo $$"
+  sh "echo $BASHPID"
+  sh "ps ax | grep bash"
 
 }
 
