@@ -1,0 +1,30 @@
+import hudson.model.Run
+import jenkins.model.InterruptionBuildAction
+import jenkins.model.CauseOfInterruption.UserInterruption
+import groovy.json.*
+import java.text.SimpleDateFormat
+import jenkins.model.Jenkins
+import hudson.model.FreeStyleProject;
+import hudson.tasks.Shell
+
+
+
+
+
+
+node(){
+
+stage('build EchoBash'){
+
+  echo $BASH
+  echo $$
+  echo $BASHPID
+  sh " ps ax | grep bash"
+
+}
+
+
+
+
+
+}
