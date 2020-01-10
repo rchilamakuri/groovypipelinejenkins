@@ -33,7 +33,7 @@ cat newfile1
 
 stage('BuildCommand_4'){
 
-diff -y -W 70 jenkinsfile4 Jenkinsfile2 --suppress-common-lines
+diff -y -W jenkinsfile4 Jenkinsfile2 --suppress-common-lines
 
 }
 
