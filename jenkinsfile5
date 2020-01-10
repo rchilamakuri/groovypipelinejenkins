@@ -10,16 +10,32 @@ import hudson.tasks.Shell
 
 node(){
 
+
 stage('build EchoBash'){
 
-  sh "echo $BASH"
-  sh "echo $BASHPID"
-  sh "ps ax | grep bash"
+cat Jenkinsfile2
+
+
+}
+
+stage('BuildCoommand_2'){
+
+cat Jenkinsfile3 > newfile1
 
 }
 
 
+stage('BuildCommand_3'){
 
+cat newfile1
+
+}
+
+stage('BuildCommand_4'){
+
+diff -y -W 70 jenkinsfile4 Jenkinsfile2 --suppress-common-lines
+
+}
 
 
 }
